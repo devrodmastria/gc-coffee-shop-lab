@@ -1,0 +1,45 @@
+﻿@model User
+
+@{
+    Random rand = new Random();
+    int userCount = rand.Next(1,20);
+}
+
+<div>
+    <h3 class="display-4">Sign Up Today</h3>
+    <h4>Free coffee for the first 10 customers!</h4>
+    <p>
+
+        <form asp-method="post" asp-action="Welcome">
+
+            <label for="FirstName">First name: </label>
+            <input type="text" name="FirstName">
+            <br />
+            <label for="LastName">Last name:</label>
+            <input type="text" name="LastName"/>
+            <br/>            
+            <label for="email">Email:</label>
+            <input type="text" name="email" required/>
+            <br/>
+            <label for="password">Password:</label>
+            <input type="password" name="password"/>
+            <br />
+            <br/>
+            @{
+                if(userCount < 11)
+                {
+                    // Model.topTenCustomer = true;
+                    <input type="submit" value="Claim Free Coffee!">
+                }
+                else
+                {
+                    // Model.topTenCustomer = false;
+                    <input type="submit" value="Register Now!">
+                }
+            }
+            
+        </form>
+
+    </p>
+
+</div>

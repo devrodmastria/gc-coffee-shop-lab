@@ -1,0 +1,24 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "Village Cafe - Dashboard";
+}
+
+<h1>Hi, @Model.FirstName!</h1>
+<br />
+@{
+    if (Model.topTenCustomer)
+    {
+        <p>Congrats!</p>
+        <br/>
+        <p>To claim your free coffee, use this coupon at checkout: <b>#TOP-CUSTOMER</b></p>
+    }
+    else
+    {
+        <p>Thanks for signing up!</p>
+        <br/>
+        <p>Enjoy 10% off from your first order with coupon <b>#BEST-COFFEE</b></p>
+
+    }
+}
+<p>To continue with checkout, please check your inbox at <u>@Model.Email</u> and verify your info.</p>
