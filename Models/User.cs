@@ -9,9 +9,5 @@
 
         public bool topTenCustomer { get; set; }
 
-        public void setCustomer(bool topCustomer)
-        {
-            this.topTenCustomer = topCustomer;
-        }
     }
 }

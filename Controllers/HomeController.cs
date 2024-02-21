@@ -1,6 +1,7 @@
 using CoffeeShopRegistration.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Reflection;
 
 namespace CoffeeShopRegistration.Controllers
 {
@@ -27,7 +28,22 @@ namespace CoffeeShopRegistration.Controllers
         { return View(); }
 
         public IActionResult Welcome(User u)
-        { return View(u); }
+        {
+            // the following logic has been added to the Registration page for practicing alternative solutions.
+            //Random rand = new Random();
+            //int userCount = rand.Next(1, 20);
+
+            //if (userCount < 11)
+            //{
+            //    u.topTenCustomer = true;
+            //}
+            //else
+            //{
+            //    u.topTenCustomer = false;
+            //}
+
+            return View(u); 
+    }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

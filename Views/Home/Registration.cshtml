@@ -28,13 +28,14 @@
             @{
                 if(userCount < 11)
                 {
-                    // Model.topTenCustomer = true;
                     <input type="submit" value="Claim Free Coffee!">
+                    <input type="hidden" value="true" name="topTenCustomer">
+
                 }
                 else
                 {
-                    // Model.topTenCustomer = false;
                     <input type="submit" value="Register Now!">
+                    <input type="hidden" value="false" name="topTenCustomer">
                 }
             }
             
